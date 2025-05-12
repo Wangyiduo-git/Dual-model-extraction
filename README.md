@@ -115,6 +115,20 @@ This script uses the OpenAI API format, making it compatible with:
 - ModelScope
 - Any OpenAI-compatible API endpoint
 
+###Local model configuration
+This tool now supports the use of locally deployed models without relying on external API services. To use the local model, please follow these steps:
+1. Ensure that you have deployed model services that support OpenAI compatible interfaces locally (such as llama.cpp, vLLM, etc.)
+2. Specify the local model service URL in the command line parameters, for example:
+```bash
+--dashscope_url " http://localhost:8000/v1 "
+--modelscope_url " http://localhost:8000/v1 "
+```
+3. If your local model service does not require an API key, it can be set to any value:
+```bash
+--dashscope_key "not-needed"
+--modelscope_key "not-needed"
+```
+For more information about local model deployment, please refer to the 'local_madels. md' document in the code repository.
 
 ## Support
 
